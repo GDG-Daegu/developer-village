@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us:Code 청년 개발자 아카데미</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Darker text color */
+        }
+        /* Custom styles for details/summary for better visual */
+        details summary {
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #e2e8f0; /* Light gray for summary */
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        details summary:hover {
+            background-color: #cbd5e1; /* Slightly darker on hover */
+        }
+        details[open] summary {
+            background-color: #94a3b8; /* Darker when open */
+            color: white;
+        }
+        details[open] summary + div {
+            padding: 1rem;
+            background-color: #f1f5f9; /* Lighter background for content */
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        /* Style for tables within details */
+        .curriculum-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .curriculum-table th, .curriculum-table td {
+            border: 1px solid #cbd5e1;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .curriculum-table th {
+            background-color: #e2e8f0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Us:Code</a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">홈</a></li>
+                <li><a href="#program" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">프로그램</a></li>
+                <li><a href="#benefits" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">혜택</a></li>
+                <li><a href="#curriculum" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">커리큘럼</a></li>
+                <li><a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">FAQ</a></li>
+                <li><a href="https://uscode.kr" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">지금 신청하기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 md:py-32 overflow-hidden rounded-b-3xl shadow-xl">
+            <div class="container mx-auto text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                    Us:Code 청년 개발자 아카데미
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up">
+                    전국 청년 개발자 25명의 지역 한 달 살이 프로그램
+                    <br class="hidden md:block">
+                    AI를 활용한 바이브코딩으로 IT 서비스 런칭
+                </p>
+                <div class="space-y-2 md:space-y-0 md:space-x-8 text-lg md:text-xl font-semibold mb-12">
+                    <p>🗓️ <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">기간: 2025.08.04.(월) ~ 2025.08.29.(금)</span></p>
+                    <p>📍 <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">장소: 의성 하녹에 (경상북도 의성군 점곡면 점곡길 29-3)</span></p>
+                    <p>👥 <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full">대상: 만 19세~34세 IT/디지털 분야 청년 개발자</span></p>
+                </div>
+                <a href="https://uscode.kr" target="_blank" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 animate-bounce-once">
+                    지금 신청하기
+                </a>
+            </div>
+            <!-- Background pattern for visual interest -->
+            <div class="absolute inset-0 z-0 opacity-10">
+                <svg class="w-full h-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <pattern id="pattern-circles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.2)"/>
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Program Overview Section -->
+        <section id="program" class="py-16 bg-white rounded-xl shadow-lg mx-auto max-w-6xl -mt-16 relative z-10 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12 text-gray-800">Us:Code는 무엇인가요?</h2>
+                <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                    바이브코딩으로 내 아이디어로 IT서비스 런칭부터 고객 검증까지 1달 안에 해보자!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 bg-blue-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-blue-600 text-5xl mb-4">💡</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">1주차</h3>
+                        <p class="text-gray-600">AI/IT 프로젝트 교육</p>
+                    </div>
+                    <div class="p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-green-600 text-5xl mb-4">🛠️</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">2주차</h3>
+                        <p class="text-gray-600">프로토타이핑 (IT 프로젝트 제작)</p>
+                    </div>
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-yellow-600 text-5xl mb-4">📈</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">3~4주차</h3>
+                        <p class="text-gray-600">온라인 마케팅 활용한 고객 검증</p>
+                    </div>
+                    <div class="p-6 bg-red-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                        <div class="text-red-600 text-5xl mb-4">🎉</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-700">말일</h3>
+                        <p class="text-gray-600">성과공유회</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Program Details Section -->
+        <section id="main-program" class="py-16 bg-gray-50 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">한 달 간의 특별한 여정</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                    Us:Code 청년 개발자 아카데미의 주차별 주요 프로그램을 소개합니다.
+                </p>
+
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-2xl">1주차: AI/IT 프로젝트 교육</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p class="mb-4">“JavaScript → Next.js → Supabase → Vercel” 완전정복</p>
+                            <p>자세한 커리큘럼은 <a href="#curriculum" class="text-blue-500 hover:underline font-semibold">아래 커리큘럼 섹션</a>을 참고해주세요.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-2xl">2주차: 기술 검증 & 비즈니스 검증 실제 프로토타입 테스트</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>프로젝트 중간보고회를 진행하며 실제 프로토타입을 테스트하고 기술 및 비즈니스 검증을 수행합니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-2xl">3주차: 로컬 청년창업가 강의 및 기술개발 프로젝트</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>지역 청년 창업가들의 강연을 듣고, 로컬과의 연결성을 찾기 위한 기술 개발 프로젝트를 진행합니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-2xl">4주차: 마케팅 및 고객검증, 최종발표</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>온라인 마케팅 채널을 활용한 고객 검증을 진행하고, 최종 프로젝트 성과를 발표하는 시간을 가집니다.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-16 bg-blue-50 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12 text-gray-800">Us:Code 참가자를 위한 특별 혜택</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-blue-500 text-4xl">🏠</div>
+                        <p class="text-lg text-gray-700 font-medium">한옥펜션 ‘하녹에’ 거주공간 무료 제공</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-green-500 text-4xl">💰</div>
+                        <p class="text-lg text-gray-700 font-medium">팀 프로젝트 시행비 팀별 800,000원 제공</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-purple-500 text-4xl">📚</div>
+                        <p class="text-lg text-gray-700 font-medium">300만원 상당의 40시간 AI/IT 프로젝트 교육 제공</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-orange-500 text-4xl">🍽️</div>
+                        <p class="text-lg text-gray-700 font-medium">식사 및 생활비품 제공</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-red-500 text-4xl">🎁</div>
+                        <p class="text-lg text-gray-700 font-medium">소정의 웰컴키트 제공</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="text-teal-500 text-4xl">🚌</div>
+                        <p class="text-lg text-gray-700 font-medium">08.04(월) 동대구역 13:00 셔틀버스 운영</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section id="curriculum" class="py-16 bg-white px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">1주차: AI/IT 프로젝트 교육 상세 커리큘럼</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                    8시간 × 5일, 시간당 하나의 주제 → 총 40개 세션으로 구성됩니다.
+                </p>
+
+                <div class="space-y-8 max-w-6xl mx-auto">
+                    <!-- Day 1 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-700 text-2xl">DAY 1 - “아이디어와 AI의 큰 그림 잡기”</summary>
+                        <div class="mt-4 text-gray-700">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>오리엔테이션 & 목표 설정 – 한 달 로드맵 이해</li>
+                                <li>문제 발견·아이디어 발굴 워크숍 – 고객 페인 포인트 찾기</li>
+                                <li>AI 시대의 서비스 트렌드 – 성공 사례·실패 사례 비교</li>
+                                <li>생성형 AI 개념·동작 원리 – LLM·딥러닝 핵심 구조</li>
+                                <li>데이터·프라이버시·윤리 – Responsible AI 체크리스트</li>
+                                <li>AI 활용 제품 벤치마킹 분석 – 3개 서비스 해부</li>
+                                <li>나의 아이디어 정제 & 1분 피치 – 팀별 피드백</li>
+                                <li>피드백 반영·아이디어 확정 – 1일차 회고</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Day 2 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-700 text-2xl">DAY 2 - “생성형 AI 툴 체험 & 프롬프트 엔지니어링”</summary>
+                        <div class="mt-4 text-gray-700">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>프롬프트 엔지니어링 기초 (Zero/One/Few-shot)</li>
+                                <li>ChatGPT 4o 실전 활용 – 정보조사·아이디어 확장</li>
+                                <li>이미지 생성형 AI(ImageFX, Midjourney) 실습</li>
+                                <li>음성·오디오 AI(ElevenLabs, 타입캐스트) 실습</li>
+                                <li>영상 생성형 AI(Kling, PIKA) 실습</li>
+                                <li>멀티모달 AI 응용 전략 – 텍스트+이미지+음성+영상 편집</li>
+                                <li>AI 도구로 문제 해결 팀 미션 – 90-분 스프린트</li>
+                                <li>AI 기반 스토리보드 작성 – 서비스 흐름 시각화</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Day 3 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-700 text-2xl">DAY 3 - “프로그래밍 개론 & 핵심 기술 익히기”</summary>
+                        <div class="mt-4 text-gray-700">
+                            <h4 class="text-xl font-semibold mb-2">3일차 A 트랙 ― “Python 기반 개발 집중 부트캠프”</h4>
+                            <table class="curriculum-table mb-8">
+                                <thead>
+                                    <tr>
+                                        <th>시간</th>
+                                        <th>세션 주제</th>
+                                        <th>핵심 개념 & 실습 포인트</th>
+                                        <th>산출물</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>17</td><td>Python 기초 문법·자료형 리마인드</td><td>변수·리스트·딕셔너리·함수·클래스, 파이썬틱 코드 스타일(PEP8)</td><td>‘짠맛 계산기’ 미니 콘솔 앱</td></tr>
+                                    <tr><td>18</td><td>개발 환경 세팅 (Colab & VS Code)</td><td>가상환경(venv)·패키지 관리(pip/poetry), Colab ↔ 로컬 연동, GitHub Codespaces 소개</td><td>개인 리포지터리 초기화</td></tr>
+                                    <tr><td>19</td><td>API·HTTP·REST 기본기</td><td>HTTP 메서드·상태코드·JSON, RESTful 설계 원칙, Postman 사용법</td><td>GET/POST 실습 로그</td></tr>
+                                    <tr><td>20</td><td>“15분 웹서버” : Flask / FastAPI 빠른 빌드</td><td>라우팅·의존성 주입·자동 Docs(Swagger), 동시성 차이</td><td>/hello , /predict 엔드포인트</td></tr>
+                                    <tr><td>21</td><td>데이터베이스 입문: Cloud Firestore vs SQLite</td><td>NoSQL vs RDB, CRUD, 파이썬 ORM(sqlmodel)</td><td>상품 테이블 및 CRUD 코드</td></tr>
+                                    <tr><td>22</td><td>AI 모델 API 연동 (OpenAI · Replicate)</td><td>API 키 관리, 스트리밍 응답, 비용 최적화, 프롬프트 버전 관리</td><td>챗봇 또는 이미지 생성 API 연결</td></tr>
+                                    <tr><td>23</td><td>Git/GitHub 협업 워크플로</td><td>브랜치 전략(git-flow), Pull Request, Issue·Project 보드, CI(Just Actions 맛보기)</td><td>첫 PR 머지 & 리뷰 경험</td></tr>
+                                    <tr><td>24</td><td>AI 코딩 어시스턴트 활용 (Claude Code · ChatGPT Code Interpreter)</td><td>코드 자동완성·리팩터링, 테스트 생성, 데이터 분석, 한계·윤리</td><td>Claude Code로 리팩터링한 diff</td></tr>
+                                </tbody>
+                            </table>
+
+                            <h4 class="text-xl font-semibold mb-2">B 트랙 – 아임웹 노코드 웹사이트 제작</h4>
+                            <table class="curriculum-table">
+                                <thead>
+                                    <tr>
+                                        <th>시간</th>
+                                        <th>세션 주제</th>
+                                        <th>핵심 산출물</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>17 시</td><td>노코드(Web Builder) 생태계 & 아임웹 소개 · Wix·Squarespace vs 아임웹 장단점 비교 · 수강 목적: ‘런딩 페이지 + 쇼핑몰’ 구축</td><td>툴 선택 이유 정리</td></tr>
+                                    <tr><td>18 시</td><td>계정·플랜 설정 & 대시보드 투어 · Starter/Pro/Global 요금 비교, 무료 체험 활용 · 팀 협업 권한 설정</td><td>프로젝트 사이트 개설</td></tr>
+                                    <tr><td>19 시</td><td>템플릿 선정 & 디자인 커스터마이징 · 섹션·블록 구조 이해 · 글꼴·컬러·레이아웃 실습</td><td>첫 페이지 초안</td></tr>
+                                    <tr><td>20 시</td><td>페이지·내비게이션 구성 · 다중 페이지/싱글-페이지 전략 · 드래그&드롭로 섹션 추가·복제·숨김</td><td>메뉴 구조 완성</td></tr>
+                                    <tr><td>21 시</td><td>컨텐츠·폼·블로그·상품 모듈 · 이미지·영상·아이콘·지도 삽입 · 뉴스레터·견적·예약 폼 만들기</td><td>CTA 폼 구축</td></tr>
+                                    <tr><td>22 시</td><td>이-커머스 & 결제 연동 · 상품·옵션·재고·쿠폰·적립금 설정 · PG/Naver Pay·배송·세금 설정</td><td>결제 테스트 완료</td></tr>
+                                    <tr><td>23 시</td><td>도메인·SSL·반응형 퍼블리싱 · 개인 도메인 연결(Starter 이상) · 모바일 최적화·PWA 옵션</td><td>실주소 배포</td></tr>
+                                    <tr><td>24 시</td><td>SEO·Analytics·마케팅 픽셀 · 메타태그·사이트맵 제출 · GA4·Facebook Pixel·네이버검색 등록 · 미니 데모 & 피드백</td><td>최종 MVP 공개</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+
+                    <!-- Day 4 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-700 text-2xl">DAY 4 - “노코드·로코드 & MVP 프로토타이핑 전략”</summary>
+                        <div class="mt-4 text-gray-700">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>노코드 플랫폼 개요(Bubble·Glide·Airtable)</li>
+                                <li>업무 자동화: Zapier·Make 실습</li>
+                                <li>외부 API 연결 & 데이터 파이프라인 설계</li>
+                                <li>UI/UX 기본 원칙 & Figma 와이어프레임</li>
+                                <li>사용자 흐름(Usability Flow) 테스트</li>
+                                <li>코드 품질·리팩터링 & AI 어시스턴트 심화</li>
+                                <li>MVP 기능 정의·우선순위 매트릭스</li>
+                                <li>팀별 2주 스프린트 계획 수립</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Day 5 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-700 text-2xl">DAY 5 - “서비스 운영·지표·다음 단계 준비”</summary>
+                        <div class="mt-4 text-gray-700">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Lean Startup & Build-Measure-Learn 사이클</li>
+                                <li>KPI 설정 & 데이터 분석 도구(GA4·Amplitude)</li>
+                                <li>클라우드 배포(AWS Amplify·Vercel) 실습</li>
+                                <li>서비스 보안·개인정보 보호(ISO·GDPR 체크)</li>
+                                <li>운영 자동화: 로깅·모니터링·알람 구축</li>
+                                <li>온라인 마케팅 채널 미리보기(인스타·유튜브·틱톡·네이버)</li>
+                                <li>다음 주 프로토타이핑 To-Do 정리</li>
+                                <li>1주차 총정리 & 데모 리허설 – 피드백·액션아이템 확정</li>
+                            </ul>
+                            <p class="mt-4 font-semibold">활용 팁:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>매 시간 “이론 30분 + 실습 30분” 구조로 즉시 적용·commit.</li>
+                                <li>Day 3까지 Next.js + Supabase 기반 MVP 백엔드·프론트 완성 → Day 4에 AI 기능·배포, Day 5에 품질·마케팅 대비.</li>
+                                <li>생성형 AI 활용을 전 과정에 녹여 개발 생산성 + 아이디어 검증 속도 모두 확보!</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 bg-gray-100 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">자주 묻는 질문 (FAQ)</h2>
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">참가 대상은 누구인가요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>만 19세~34세 IT/디지털 분야 청년 개발자를 대상으로 합니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">모집 기간은 언제인가요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>2025.07.17.(목) ~ 2025.07.31.(목) 입니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">선정 발표는 언제인가요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>2025.08.01.(금)에 발표됩니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">참가 인원은 몇 명인가요? 팀 단위 지원인가요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>총 25명이며, 팀별 지원입니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">참가비가 있나요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>팀별 보증금 100,000원이 있으며, 프로그램 종료 후 반환될 예정입니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">숙소는 제공되나요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>네, 한옥펜션 ‘하녹에’ 거주공간이 무료로 제공됩니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">식사는 제공되나요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>네, 식사 및 생활비품이 제공됩니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">셔틀버스가 운행되나요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>네, 2025년 8월 4일(월) 동대구역에서 오후 1시에 셔틀버스가 운영될 예정입니다.</p>
+                        </div>
+                    </details>
+                    <details class="bg-white p-6 rounded-lg shadow-md">
+                        <summary class="text-blue-600 text-xl">문의는 어디로 해야 하나요?</summary>
+                        <div class="mt-4 text-gray-700">
+                            <p>events@uscode.kr 로 문의해주시면 됩니다.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 px-6 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto text-center">
+            <div class="mb-6">
+                <p class="text-lg font-semibold mb-2">주최: ㈜메이드인피플</p>
+                <p class="text-lg font-semibold mb-2">주관: ㈜메이드인피플</p>
+                <p class="text-lg font-semibold mb-4">후원: 의성군, Google for Developers</p>
+                <p class="text-md">문의: <a href="mailto:events@uscode.kr" class="text-blue-400 hover:underline">events@uscode.kr</a></p>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2025 Us:Code. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
